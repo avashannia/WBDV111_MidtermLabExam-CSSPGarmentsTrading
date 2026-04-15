@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - CSSP Garments Trading</title>
+
+    <link rel="icon" type="image/png" href="Images/logo-light-text.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+ 
+    <script src="https://kit.fontawesome.com/493ae0299a.js" crossorigin="anonymous"></script>
+    
+</head>
+    <body>
+
+        <!-- ===== PRE-HEADER TICKER ===== -->
+        <!-- Infinite scrolling -->
+        <div class="pre-header">
+            <div class="ticker-track" id="tickerTrack">
+                <!-- Items are cloned by JS for infinite loop -->
+                <span><i class="fa-solid fa-ship"></i> National Delivery: 3 Days</span>
+                <span><i class="fa-solid fa-map-location-dot"></i> Provincial Delivery: 5 Days</span>
+                <span><i class="fa-solid fa-globe"></i> International Shipping: 1 Week</span>
+                <span><i class="fa-solid fa-headset"></i> Customer Service: 7AM – 7PM</span>
+                <span><i class="fa-solid fa-shield-halved"></i> 100% Secure Checkout</span>
+                <span><i class="fa-solid fa-box-open"></i> Welcome Offer: Free Shipping</span>
+            </div>
+        </div>
+    
+        <!-- ===== HEADER / NAVIGATION ===== -->
+        <header class="site-header" id="siteHeader">
+            <div class="header-inner">
+
+                <!-- Logo -->
+                <a href="Home.html" class="logo-wrap">
+                    <div class="logo-icon">
+                        <img src="Assets/logo-light-text.png" class="logo-img light-logo" alt="Logo">
+                        <img src="Assets/logo-dark-text.png" class="logo-img dark-logo" alt="Logo">
+                    </div>
+                    <div class="logo-text">CSSP<span>Garments</span></div>
+                </a>
+    
+                <!-- Main nav -->
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+            
+                    <!-- Products mega menu -->
+                    <li class="nav-item has-mega">
+                        <a href="#products" class="nav-link">Products <i class="fa-solid fa-chevron-down nav-caret"></i></a>
+                        <div class="mega-menu">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                            <p class="mega-label">Uniforms</p>
+                            <a href="#" class="mega-item">
+                                <img src="https://placehold.co/60x60/1a3a5c/ffffff?text=CV" alt="Coveralls" />
+                                <span>Coveralls</span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <img src="https://placehold.co/60x60/1a3a5c/ffffff?text=KU" alt="Kitchen Uniforms" />
+                                <span>Kitchen Uniforms</span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <img src="https://placehold.co/60x60/1a3a5c/ffffff?text=JK" alt="Jackets" />
+                                <span>Jackets</span>
+                            </a>
+                            </div>
+                            <div class="mega-col">
+                            <p class="mega-label">Safety</p>
+                            <a href="#" class="mega-item">
+                                <img src="https://placehold.co/60x60/e63946/ffffff?text=PP" alt="PPE" />
+                                <span>PPE Equipment</span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <img src="https://placehold.co/60x60/e63946/ffffff?text=SH" alt="Safety Shoes" />
+                                <span>Safety Shoes</span>
+                            </a>
+                            <a href="#" class="mega-item">
+                                <img src="https://placehold.co/60x60/e63946/ffffff?text=GL" alt="Gloves" />
+                                <span>Work Gloves</span>
+                            </a>
+                            </div>
+                            <div class="mega-col mega-featured">
+                            <p class="mega-label">Featured</p>
+                            <div class="mega-feature-card">
+                                <img src="https://placehold.co/200x140/f4d03f/1a3a5c?text=New+Arrivals" alt="New Arrivals" />
+                                <p>New Season Arrivals</p>
+                                <a href="#" class="btn-sm">Shop Now</a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+            
+                    <!-- About Us mega menu -->
+                    <li class="nav-item has-mega">
+                        <a href="#about" class="nav-link">About Us <i class="fa-solid fa-chevron-down nav-caret"></i></a>
+                        <div class="mega-menu">
+                        <div class="mega-inner">
+                            <div class="mega-col">
+                            <p class="mega-label">Company</p>
+                            <a href="#" class="mega-item text-only"><i class="fa-solid fa-anchor"></i> Our Story</a>
+                            <a href="#" class="mega-item text-only"><i class="fa-solid fa-users"></i> Our Team</a>
+                            <a href="#" class="mega-item text-only"><i class="fa-solid fa-house"></i> Location</a>
+                            </div>
+                            <div class="mega-col">
+                            <p class="mega-label">Support</p>
+                            <a href="#faq" class="mega-item text-only"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                            <a href="#footer" class="mega-item text-only"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+                            <a href="#" class="mega-item text-only"><i class="fa-solid fa-file-contract"></i> Policies</a>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+            
+                    </ul>
+                </nav>
+    
+                <!-- Right-side icon group -->
+                <div class="header-actions">
+            
+                    <!-- Currency switcher -->
+                    <div class="currency-switcher" id="currencySwitcher">
+                    <button class="currency-btn" id="currencyBtn">
+                        <i class="fa-solid fa-coins"></i>
+                        <span id="activeCurrency">PHP</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <ul class="currency-dropdown" id="currencyDropdown">
+                        <li data-currency="PHP" data-symbol="₱">🇵🇭 PHP</li>
+                        <li data-currency="USD" data-symbol="$">🇺🇸 USD</li>
+                        <li data-currency="EUR" data-symbol="€">🇪🇺 EUR</li>
+                    </ul>
+                    </div>
+            
+                    <!-- Wishlist icon 
+                    <button class="icon-btn" title="Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge">0</span>
+                    </button>
+                    -->
+
+                    <!-- Cart icon -->
+                    <button class="icon-btn" title="Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge" id="cartBadge">0</span>
+                    </button>
+            
+                    <!-- Search icon -->
+                    <button class="icon-btn" id="searchToggle" title="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+            
+                    <!-- Light/Dark mode toggle -->
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>
+                    </button>
+            
+                    <!-- Hamburger (mobile only) -->
+                    <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                    </button>
+                </div>
+    
+            </div>
+    
+            <!-- Search bar (hidden until toggled) -->
+            <div class="search-bar" id="searchBar">
+                <input type="text" placeholder="Search uniforms, PPE, shoes..." id="searchInput" />
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </header>
+
+        <section class="hero-product">
+                <div class="hero-content">
+                    <span class="hero-label-product">TESTED BY THE OCEAN</span>
+                    <h1 class="hero-title">Chosen for <span>Excellence</span></h1>
+                    <p class="hero-desc-product">Choose gear that works as hard as you do. Our seaman clothing is carefully crafted to deliver unmatched comfort, lasting durability, and reliable performance—because at sea, every detail matters.</p>
+                </div>
+        </section>
+
+        <!-- ===== PRODUCTS ===== -->
+        <section class="products" id="collection">
+            <div class="section-header-product">
+                <span class="section-sub-product">Personal Protective Equipment</span>
+                <h2 class="section-title-product">Shoes</h2>
+            </div>
+
+            <div class="product-grid-product">
+                <div class="product-card">
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/PR1-Front-High Cut (MG Safety).JPG" class="img-front" alt="Front View">
+                        <img src="Assets/Products/PR1-Back-High Cut (MG Safety).JPG" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">Bestseller</span>
+                        </div>
+                        <button class="quick-add" onclick="addToCart()">
+                            <i class="fa-solid fa-plus"></i> Quick Add
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">PPE - Shoes</span>
+                        <h3 class="card-name">MG Safety (High Cut)</h3>
+                        <div class="card-price">₱1,200.00</div>
+                        <div class="rating">★★★★★ <span>(125)</span></div>
+                        
+                        <select class="size-select" style="width: 100%; margin-top: 10px; padding: 5px; border-radius: 8px;">
+                            <option selected disabled>Size</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/PR2-Front-Low Cut (Rockwinner).JPG" class="img-front" alt="Front View">
+                        <img src="Assets/Products/PR2-Back-Low Cut (Rockwinner).JPG" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        <button class="quick-add" onclick="addToCart()">
+                            <i class="fa-solid fa-plus"></i> Quick Add
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">PPE - Shoes</span>
+                        <h3 class="card-name">Rockwinner (Low Cut)</h3>
+                        <div class="card-price">₱1,000.00</div>
+                        <div class="rating">★★★★★ <span>(55)</span></div>
+                        
+                        <select class="size-select" style="width: 100%; margin-top: 10px; padding: 5px; border-radius: 8px;">
+                            <option selected disabled>Size</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/PR3-Front-Low Cut (MG Safety).JPG" class="img-front" alt="Front View">
+                        <img src="Assets/Products/PR3-Back-Low Cut (MG Safety).JPG" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">Bestseller</span>
+                        </div>
+                        <button class="quick-add" onclick="addToCart()">
+                            <i class="fa-solid fa-plus"></i> Quick Add
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">PPE - Shoes</span>
+                        <h3 class="card-name">MG Safety (Low Cut)</h3>
+                        <div class="card-price">₱1,100.00</div>
+                        <div class="rating">★★★★★ <span>(278)</span></div>
+                        
+                        <select class="size-select" style="width: 100%; margin-top: 10px; padding: 5px; border-radius: 8px;">
+                            <option selected disabled>Size</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                        </select>
+                    </div>
+                </div> 
+            </div> 
+        </section>
+        
+        <section class="products" id="collection">
+            <div class="section-header-product">
+                <span class="section-sub-product">Uniforms</span>
+                <h2 class="section-title-product">Coveralls and Top</h2>
+            </div>
+
+            <div class="product-grid-product">
+                <div class="product-card">
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR1-Front-Coverall (Blue).JPG" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR1-Back-Coverall (Blue).JPG" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">Bestseller</span>
+                        </div>
+                        <button class="quick-add" onclick="addToCart()">
+                            <i class="fa-solid fa-plus"></i> Quick Add
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Coveralls</span>
+                        <h3 class="card-name">Coveralls (Blue)</h3>
+                        <div class="card-price">₱900.00</div>
+                        <div class="rating">★★★★★ <span>(137)</span></div>
+                        
+                        <select class="size-select" style="width: 100%; margin-top: 10px; padding: 5px; border-radius: 8px;">
+                            <option selected disabled>Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">Extra Large</option>
+                            <option value="XXL">Double Extra Large</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR2-Front-Coverall (Orange).JPG" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR2-Back-Coverall (Orange).JPG" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        <button class="quick-add" onclick="addToCart()">
+                            <i class="fa-solid fa-plus"></i> Quick Add
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Coveralls</span>
+                        <h3 class="card-name">Coveralls (Orange)</h3>
+                        <div class="card-price">₱1,000.00</div>
+                        <div class="rating">★★★★★ <span>(866)</span></div>
+                        
+                        <select class="size-select" style="width: 100%; margin-top: 10px; padding: 5px; border-radius: 8px;">
+                            <option selected disabled>Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">Extra Large</option>
+                            <option value="XXL">Double Extra Large</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR3-Front-Coverall (Beige).JPG" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR3-Back-Coverall (Beige).JPG" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">Sale</span>
+                        </div>
+                        <button class="quick-add" onclick="addToCart()">
+                            <i class="fa-solid fa-plus"></i> Quick Add
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Coveralls</span>
+                        <h3 class="card-name">Coveralls (Beige)</h3>
+                        <div class="card-price">₱950.00</div>
+                        <div class="rating">★★★★★ <span>(39)</span></div>
+                        
+                        <select class="size-select" style="width: 100%; margin-top: 10px; padding: 5px; border-radius: 8px;">
+                            <option selected disabled>Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">Extra Large</option>
+                            <option value="XXL">Double Extra Large</option>
+                        </select>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <div class="card-image-wrap"> 
+                        <img src="Assets/Products/UNI-PR4-Front-Coverall (Chef's).JPG" class="img-front" alt="Front View">
+                        <img src="Assets/Products/UNI-PR4-Back-Coverall (Chef's).JPG" class="img-back" alt="Back View">
+                        <div class="card-badges">
+                            <span class="badge-tag new">New</span>
+                        </div>
+                        <button class="quick-add" onclick="addToCart()">
+                            <i class="fa-solid fa-plus"></i> Quick Add
+                        </button>
+                    </div>
+                    <div class="card-info">
+                        <span class="card-category">Uniforms - Tops</span>
+                        <h3 class="card-name">Chef's White Top</h3>
+                        <div class="card-price">₱800.00</div>
+                        <div class="rating">★★★★★ <span>(214)</span></div>
+                        
+                        <select class="size-select" style="width: 100%; margin-top: 10px; padding: 5px; border-radius: 8px;">
+                            <option selected disabled>Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">Extra Large</option>
+                            <option value="XXL">Double Extra Large</option>
+                        </select>
+                    </div>
+                </div> 
+            </div> 
+        </section>
+        
+        <!-- ===== FOOTER ===== -->
+        <footer class="site-footer" id="footer">
+            <div class="footer-wave">
+            <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,0 1080,80 1440,40 L1440,0 L0,0 Z" /></svg>
+            </div>
+            <div class="footer-inner">
+        
+            <!-- Brand col -->
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                <i class="fa-solid fa-ship"></i>
+                <span>CSSP Garments</span>
+                </div>
+                <p>Your trusted maritime uniform supplier since 2024. Quality gear for every sailor, cook, and crew member.</p>
+                <div class="social-icons">
+                <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" title="Viber"><i class="fa-brands fa-viber"></i></a>
+                </div>
+            </div>
+        
+            <!-- Quick links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                <li><a href="#products"><i class="fa-solid fa-chevron-right"></i> Products</a></li>
+                <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                <li><a href="#reviews"><i class="fa-solid fa-chevron-right"></i> Reviews</a></li>
+                <li><a href="#faq"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
+                </ul>
+            </div>
+        
+            <!-- Contact 
+            <div class="footer-col contact-col">
+                <h4>Contact Us</h4>
+                <div class="footer-form">
+                <input type="text" placeholder="Your Name" id="footerName" />
+                <input type="email" placeholder="Email Address" id="footerEmail" />
+                <textarea placeholder="Your message..." id="footerMessage"></textarea>
+                <button class="btn-primary" id="footerSend">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        
+            </div>
+            us form -->
+        
+            <div class="footer-bottom">
+            <p>&copy; 2024 CSSP Garments Trading. All rights reserved.<br> Designed by Logmunch!</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Shipping Policy</a>
+            </div>
+            </div>
+        </footer>
+    
+        <!-- Back to top button -->
+        <button class="back-to-top" id="backToTop" title="Back to Top">
+            <i class="fa-solid fa-anchor"></i>
+        </button>
+    
+        <script src="Script.js"></script>
+    </body>
+</html>
