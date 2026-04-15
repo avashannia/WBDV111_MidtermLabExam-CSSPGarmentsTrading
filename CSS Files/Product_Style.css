@@ -875,7 +875,7 @@ section { padding: 100px 5%; }
 .product-grid-product {
     display: grid !important;
     /* This creates the 5-column table layout */
-    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
     
     /* Spacing between your "table cells" */
     gap: 30px 20px; /* 30px vertical (row gap), 20px horizontal (column gap) */
@@ -905,7 +905,7 @@ section { padding: 100px 5%; }
 
 @media (max-width: 768px) {
     .product-grid-product {
-        grid-template-columns: repeat(1, 1fr) !important; /* 1 per row for mobile */
+        grid-template-columns: repeat(2, 1fr) !important; /* 1 per row for mobile */
         gap: 20px;
     }
 }
