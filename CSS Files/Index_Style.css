@@ -886,31 +886,36 @@ section {
   margin-right: 8px; 
 }
 
+/* products page */
+/* THE GRID ENGINE */
 .product-grid-product {
     display: grid !important;
     /* This creates the 5-column table layout */
-    grid-template-columns: repeat(4, 1fr) !important
-    /* spacing between "table cells" */
+    grid-template-columns: repeat(4, 1fr) !important;
+    
+    /* Spacing between your "table cells" */
     gap: 30px 20px; /* 30px vertical (row gap), 20px horizontal (column gap) */
+    
     padding: 40px 5%;
     width: 100%;
     margin: 0 auto;
 }
 
-/* ensure cards stay uniform in the "table" */
+/* Ensure cards stay uniform in the "table" */
 .product-card {
     display: flex;
     flex-direction: column;
-    height: 100%; /* makes all cards in a row the same height */
+    height: 100%; /* Makes all cards in a row the same height */
     background: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
 
+/* KEEP YOUR EXISTING MEDIA QUERIES BELOW THIS */
 @media (max-width: 1200px) {
     .product-grid-product {
-        grid-template-columns: repeat(3, 1fr) !important; /* drops to 3 per row for tablets */
+        grid-template-columns: repeat(3, 1fr) !important; /* Drops to 3 per row for tablets */
     }
 }
 
@@ -927,20 +932,51 @@ section {
   }
 }
 
-/* container for the stars */
+/* Container for the stars */
 .rating {
     color: #f4d03f; /* Yellow/Gold color for stars */
     margin-top: 5px;
     font-size: 14px; /* Optional: adjust star size */
 }
 
-/* number next to the stars */
+/* The number in parentheses next to the stars */
 .rating span {
-    color: #555; /* gray color */
-    margin-left: 4px; 
+    color: #555; /* Gray color for the (6) */
+    margin-left: 4px; /* Tiny space between stars and number */
 }
 
-/* product card */
+/* Scrollable product grid */
+/* .product-grid {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 12px 4px;
+  flex: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.product-grid::-webkit-scrollbar { display: none; }
+
+/* Carousel dots */
+/* .carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+.carousel-dot.active { background: var(--navy); width: 24px; border-radius: 4px; }
+*/
+
+/* Product card */
 .product-card {
   flex: 0 0 280px;
   background: var(--surface);
@@ -949,19 +985,17 @@ section {
   box-shadow: var(--shadow);
   transition: transform var(--transition), box-shadow var(--transition);
 }
-
 .product-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
 }
 
-/* image hover swap */
+/* Image hover swap */
 .card-image-wrap {
   position: relative;
   height: 320px;
   overflow: hidden;
 }
-
 .img-front, .img-back {
   position: absolute;
   inset: 0;
@@ -969,126 +1003,11 @@ section {
   object-fit: cover;
   transition: opacity 0.5s ease;
 }
+.img-back { opacity: 0; }
+.card-image-wrap:hover .img-front { opacity: 0; }
+.card-image-wrap:hover .img-back { opacity: 1; }
 
-.img-back { 
-  opacity: 0; 
-}
 
-.card-image-wrap:hover, .img-front { 
-  opacity: 0; 
-}
-
-.card-image-wrap:hover, .img-back { 
-  opacity: 1; 
-}
-
-.card-badges {
-  position: absolute;
-  top: 12px; left: 12px;
-  display: flex; gap: 6px;
-  z-index: 1;
-}
-
-.badge-tag {
-  padding: 4px 10px;
-  background: var(--navy);
-  color: var(--yellow);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border-radius: 20px;
-}
-
-.badge-tag.new { 
-  background: var(--green); 
-  color: white; 
-}
-
-.badge-tag.sale { 
-  background: var(--red); 
-  color: white; 
-}
-
-.quick-add {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 14px;
-  background: var(--navy);
-  color: var(--yellow);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-align: center;
-  transform: translateY(100%);
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.card-image-wrap:hover, .quick-add { 
-  transform: translateY(0); 
-}
-
-.quick-add:hover { 
-  background: var(--yellow); 
-  color: var(--navy); 
-}
-
-.card-info { 
-  padding: 18px; 
-}
-
-.card-category {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--red);
-  margin-bottom: 6px;
-}
-
-.card-name {
-  font-size: 1.1rem;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-
-.card-price {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
-  color: var(--navy);
-  letter-spacing: 0.04em;
-}
-
-[data-theme="dark"] .card-price { 
-  color: var(--yellow); 
-}
-
-/* other needs sa products page*/
-.section-header-product { 
-  text-align: center; 
-  margin-bottom: 25px; 
-}
-
-.section-sub-product {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--green);
-  margin-bottom: 12px;
-}
-
-.section-title-product {
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
-  color: var(--text);
-}
 
 /* about section */
 .about { 
