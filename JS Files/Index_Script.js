@@ -1,4 +1,8 @@
 // helper functions for easier element selection
+const $ = id => document.getElementById(id);
+const $$ = sel => document.querySelectorAll(sel);
+
+
 const tickerTrack = $('tickerTrack');
 if (tickerTrack) {
   const clone = tickerTrack.innerHTML;
@@ -14,7 +18,6 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
-
 
 // toggles mobile nav and mega menu
 const hamburger = $('hamburger');
@@ -83,7 +86,6 @@ function updateThemeUI(theme) {
   }
 }
 
-// exchange rates relative to php (country base currency)
 const rates = {
   PHP: { symbol: '₱', rate: 1 },
   USD: { symbol: '$', rate: 0.018 },
@@ -92,12 +94,12 @@ const rates = {
 
 let currentCurrency = 'PHP';
 
-// toggle dropdown visibility
+// Toggle dropdown visibility
 $('currencyBtn').addEventListener('click', () => {
   $('currencyDropdown').classList.toggle('open');
 });
 
-// close dropdown when clicking outside
+// Close dropdown when clicking outside
 document.addEventListener('click', e => {
   const switcher = $('currencySwitcher');
   if (!switcher.contains(e.target)) {
@@ -105,7 +107,7 @@ document.addEventListener('click', e => {
   }
 });
 
-// when user picks a currency, update everything
+// When user picks a currency, update everything
 $$('#currencyDropdown li').forEach(item => {
   item.addEventListener('click', () => {
     const chosen = item.getAttribute('data-currency');
@@ -123,50 +125,6 @@ $$('#currencyDropdown li').forEach(item => {
   });
 });
 
-
-// product carousel 
-const productGrid  = $('productGrid');
-const prevBtn      = $('prevBtn');
-const nextBtn      = $('nextBtn');
-const dotsWrap     = $('carouselDots');
-const cards        = $$('.product-card');
-const cardWidth    = 280 + 24; // card width + gap
-
-// build dots based on number of cards
-cards.forEach((_, i) => {
-  const dot = document.createElement('button');
-  dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-  dot.dataset.index = i;
-  dotsWrap.appendChild(dot);
-  dot.addEventListener('click', () => scrollToCard(i));
-});
-
-// scroll forward
-nextBtn.addEventListener('click', () => {
-  productGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
-});
-
-// scroll backward
-prevBtn.addEventListener('click', () => {
-  productGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-});
-
-// update active dot as user scrolls
-productGrid.addEventListener('scroll', () => {
-  const index = Math.round(productGrid.scrollLeft / cardWidth);
-  updateDots(index);
-});
-
-function scrollToCard(index) {
-  productGrid.scrollTo({ left: cardWidth * index, behavior: 'smooth' });
-  updateDots(index);
-}
-
-function updateDots(index) {
-  $$('.carousel-dot').forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-}
 
 //  add item to cart and add the badge count
 let cartCount = 0;
@@ -324,4 +282,3 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-$$('.reveal').forEach(el => observer.observe(el));
